@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css\style.css' %}">
+<div class="container">
+	<div class="row">
+		<div class="col-sm-11 col-md-4 col-xl-11 mx-auto mt-5 px-3">
+			<h1 class="fw-bold">Manage your Inventory</h1>
+			<p class="fw">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<span>
+				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span>
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+				</span>
+			</span></p>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-auto col-md-auto col-xl-auto mx-auto mt-5 px-3">
+			<a href="{% url 'dashboard' %}" class="btn btn-primary">Open the inventory</a>
+		</div>
+	</div>
+</div>
+{% endblock content %}

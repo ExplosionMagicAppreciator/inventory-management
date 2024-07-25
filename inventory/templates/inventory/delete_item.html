@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div>
+		<a href="{% url 'dashboard' %}" class="btn btn-outline-primary my-3 mx-4">←</a>
+		<div class="row">
+			<form method="POST" class="col-sm-11 col-md-4 mx-auto mt-5">
+				{% csrf_token %}
+				<h1 class="fw-light">Are you sure you want to permanently delete "{{ item.name }}" from the database? </h1>
+
+				<div>
+					<button class="btn btn-danger">Yes, proceed</button>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock content %}

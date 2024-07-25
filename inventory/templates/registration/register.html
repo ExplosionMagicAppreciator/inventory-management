@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Create an account{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="row">
+	<div class="col-11 col-md-4 mx-auto mt-5">
+    <h1>Register</h1>
+    <p>fill up the following form to access the inventory:</p>
+    <form method="post">
+      {{ user_form|crispy }}
+      {% csrf_token %}
+      <div class="mt-3">
+        <button class="btn btn-primary">register</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
